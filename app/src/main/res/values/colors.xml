@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF9800</color>
+    <color name="colorPrimaryDark">#F57C00</color>
+    <color name="colorAccent">#009688</color>
+
+    <color name="welcomeText">#FAFAFA</color>
+
+    <color name="buttonSelected">#009688</color>
+    <color name="buttonPlain">@android:color/transparent</color>
+    <color name="controlsBackground">#009688</color>
+    <color name="buttonText">@android:color/primary_text_light</color>
+
+    <color name="bg">#e6e6e6</color>
+</resources>

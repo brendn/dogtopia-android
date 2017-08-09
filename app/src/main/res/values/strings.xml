@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Dogtopia</string>
+
+    <string name="cam_info">Cameras are turned off for lunch time and closing hours.</string>
+    <string name="cam_title">Live Cameras - NAME</string>
+
+    <string name="cam_gym">Gym</string>
+    <string name="cam_toybox">Toybox</string>
+    <string name="cam_romper">Romper</string>
+    <string name="cam_outdoor">Outside</string>
+
+    <string name="start_welcome">Welcome</string>
+    <string name="start_subtitle">Please Select a Location</string>
+
+    <string-array name="locations">
+        <item>None</item>
+        <item>Commerce</item>
+        <item>Bloomfield</item>
+        <item>Utica</item>
+    </string-array>
+</resources>
