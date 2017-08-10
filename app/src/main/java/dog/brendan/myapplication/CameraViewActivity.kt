@@ -31,7 +31,6 @@ class CameraViewActivity : AppCompatActivity() {
 
     private var loadTarget: com.squareup.picasso.Target? = null
 
-
     /**
      * TODO:
      * Check if it's naptime.  If so, display a different message and don't show cameras.
@@ -45,7 +44,7 @@ class CameraViewActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         if (intent != null) {
-            var extra = intent.extras.get("location") as String
+            val extra = intent.extras.get("location") as String
             for (loc in locationManager.locations) {
                 if (loc.name == extra) {
                     currentLocation = loc
@@ -172,5 +171,10 @@ class CameraViewActivity : AppCompatActivity() {
             start()
         }
         return this
+    }
+
+    override fun onPause() {
+        super.onPause()
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
     }
 }

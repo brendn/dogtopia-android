@@ -6,9 +6,8 @@ import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.AdapterView
 import android.widget.Spinner
-import org.jetbrains.anko.contentView
-import org.jetbrains.anko.sdk25.coroutines.onItemSelectedListener
-import org.jetbrains.anko.toast
+import android.view.animation.AnimationUtils
+import android.widget.TextView
 
 
 class MainActivity : AppCompatActivity() {
@@ -27,7 +26,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start)
-
+        fadeIn(findViewById<TextView>(R.id.welcome), 250L)
+        fadeIn(findViewById<TextView>(R.id.subtitle), 500L)
+        fadeIn(findViewById<TextView>(R.id.spinner), 500L)
         val spinner = findViewById<Spinner>(R.id.spinner)
         spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parentView: AdapterView<*>, selectedItemView: View, position: Int, id: Long) {
@@ -45,6 +46,19 @@ class MainActivity : AppCompatActivity() {
             }
 
         }
+    }
+
+    private fun fadeIn(view: View, offset: Long) {
+        val anim = AnimationUtils.loadAnimation(this, android.R.anim.fade_in)
+        anim.reset()
+        view.clearAnimation()
+        anim.startOffset = offset
+        view.startAnimation(anim)
+    }
+
+    override fun onPause() {
+        super.onPause()
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
     }
 
     private fun displayCameraActivity(location: String) {
