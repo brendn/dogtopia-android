@@ -12,10 +12,19 @@
     <string name="start_welcome">Welcome</string>
     <string name="start_subtitle">Please Select a Location</string>
 
+	<string-array name="rooms">
+		<item>Gym</item>
+		<item>Romper</item>
+		<item>Toybox</item>
+		<item>Outside</item>
+	</string-array>
+
     <string-array name="locations">
         <item>None</item>
         <item>Commerce</item>
         <item>Bloomfield</item>
         <item>Utica</item>
+        <item>Scottsdale</item>
+        <item>Coquitlam</item>
     </string-array>
 </resources>
