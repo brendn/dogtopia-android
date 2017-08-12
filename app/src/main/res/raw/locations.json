@@ -131,5 +131,120 @@
 		]
 	  }
 	]
+  },
+  {
+	"name": "California",
+	"shortname": "CA",
+	"location": [
+	  {
+		"name": "South Coast",
+		"address": "3203 South Harbor Blvd, Santa Ana, California 92704",
+		"phone": "714-257-5747",
+		"website": "https://www.dogtopia.com/santa-ana-south-coast/",
+		"email": "southcoast@dogdaycare.com",
+		"camera": [
+		  {
+			"name": "Gym",
+			"id": "9963eb1bcbd549e2b178814c70c90fdd"
+		  },
+		  {
+			"name": "Romper",
+			"id": "689860e4ca3948f98251b111dad3cc8a"
+		  }
+		]
+	  },
+	  {
+		"name": "Temecula",
+		"address": "27629 Commerce Center Dr, Temecula, California 92590",
+		"phone": "951-703-1781",
+		"website": "https://www.dogtopia.com/temecula/",
+		"email": "temecula@dogdaycare.com",
+		"camera": [
+		  {
+			"name": "Yard",
+			"id": "ce29280b933d4dd6b991bde0a0309568"
+		  },
+		  {
+			"name": "Romper",
+			"id": "510b6f42c37540eebc77776d69de5b2e"
+		  },
+		  {
+			"name": "Gym",
+			"id": "1a40c1ecb3e443828d2ba8ecada64cd6"
+		  }
+		]
+	  },
+	  {
+		"name": "Miramar",
+		"address": "5260 Eastgate Mall, San Diego, California 92121",
+		"phone": "858-225-7072",
+		"website": "https://www.dogtopia.com/san-diego-miramar/",
+		"email": "miramar@dogdaycare.com",
+		"camera": [
+		  {
+			"name": "Lounge",
+			"id": "85692b76004847d48ed6cd5bea4ca37f"
+		  },
+		  {
+			"name": "Romper",
+			"id": "0eaa61b9d58e485e9e6ad1520a20578a"
+		  },
+		  {
+			"name": "Toybox",
+			"id": "eac8796eeae04935ad98bfc967d61e36"
+		  }
+		]
+	  }
+	]
+  },
+  {
+	"name": "Colorado",
+	"shortname": "CO",
+	"location": [
+	  {
+		"name": "Lafayette",
+		"address": "300 W South Boulder Rd, Lafayette, Colorado 80026",
+		"phone": "720-263-4583",
+		"website": "https://www.dogtopia.com/lafayette/",
+		"email": "lafayette@dogdaycare.com",
+		"camera": [
+		  {
+			"name": "Romper",
+			"id": "47256a8288cd42aaa51f5165abde87aa"
+		  },
+		  {
+			"name": "Gym",
+			"id": "1f8f303f2f1c4ce5820bafd8bd29f1c9"
+		  }
+		]
+	  }
+	]
+  },
+  {
+	"name": "British Columbia",
+	"shortname": "BC",
+	"location": [
+	  {
+		"name": "Coquitlam",
+		"address": "822 Brunette Avenue, Coquitlam, British Columbia V3K 1C4",
+		"phone": "778-397-1364",
+		"website": "https://www.dogtopia.com/coquitlam/",
+		"email": "coquitlam@dogdaycare.com",
+		"camera": [
+		  {
+			"name": "Gym",
+			"id": "fa7d9a34fed2421592467412213f6703"
+		  },
+		  {
+			"name": "Toybox",
+			"id": "b99e33e40ced4b8999752effd8267175"
+		  },
+		  {
+			"name": "Backyard",
+			"id": "6f6ef1a30847404ca3f9eb0568dc1d63"
+		  }
+		]
+	  }
+	]
   }
 ]

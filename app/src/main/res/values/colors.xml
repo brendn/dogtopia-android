@@ -2,9 +2,14 @@
 <resources>
     <color name="colorPrimary">#FF9800</color>
     <color name="colorPrimaryDark">#F57C00</color>
-    <color name="colorAccent">#009688</color>
 
-    <color name="welcomeText">#FAFAFA</color>
+	<color name="colorPrimaryIntro">#FF9800</color>
+    <color name="colorPrimaryDarkIntro">#FF9800</color>
+
+	<color name="colorAccent">#009688</color>
+
+    <color name="welcomeText">#fafafa</color>
+    <color name="welcomeTextSub">#befafafa</color>
 
     <color name="buttonSelected">#009688</color>
     <color name="buttonPlain">@android:color/transparent</color>

@@ -7,13 +7,9 @@ import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.*
 import org.jetbrains.anko.sdk25.coroutines.onInfo
-import org.jetbrains.anko.sdk25.coroutines.onItemSelectedListener
 import org.jetbrains.anko.toast
 
-
 class CameraViewActivity : AppCompatActivity() {
-
-    private val locationManager = LocationManager()
 
     private var currentLocation = LocationLoader.locations[0]
 
@@ -22,8 +18,6 @@ class CameraViewActivity : AppCompatActivity() {
     private var prevUUID = currentLocation.getCamera("Gym")
 
     private lateinit var progress: ProgressBar
-
-    private var loadTarget: com.squareup.picasso.Target? = null
 
     /**
      * TODO:
@@ -86,13 +80,9 @@ class CameraViewActivity : AppCompatActivity() {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinner.adapter = adapter
         val vidView = findViewById<VideoView>(R.id.camera)
-        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(parentView: AdapterView<*>, selectedItemView: View, position: Int, id: Long) {
-                vidView.changeRoom(currentLocation.getCamera(options[position]))
-                println(currentLocation.getCamera(options[position]))
-            }
-
-            override fun onNothingSelected(parentView: AdapterView<*>) {}
+        spinner.onSelect { position ->
+            vidView.changeRoom(currentLocation.getCamera(options[position]))
+            println(currentLocation.getCamera(options[position]))
         }
     }
 

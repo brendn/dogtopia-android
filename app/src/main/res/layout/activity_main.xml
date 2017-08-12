@@ -50,10 +50,9 @@
 				android:layout_height="match_parent"
 				android:layout_weight="1"
 				android:gravity="center"
-				android:paddingLeft="16dp"
-				android:text="Current Room:"
-				android:textAlignment="viewStart"
-				android:textAppearance="@android:style/TextAppearance.Material.Widget.DropDownHint" />
+				android:paddingStart="16dp"
+				android:text="@string/current_room"
+				android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
 
 			<Spinner
 				android:id="@+id/camera_selector"

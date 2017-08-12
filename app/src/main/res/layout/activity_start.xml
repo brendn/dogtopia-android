@@ -1,58 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#F57C00">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/colorPrimaryIntro"
+	android:theme="@style/AppTheme.NoActionBar">
 
-    <TextView
-        android:id="@+id/welcome"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="200dp"
-        android:text="@string/start_welcome"
-        android:textColor="@color/welcomeText"
-        android:textAlignment="center"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="163dp"
-        tools:layout_editor_absoluteY="175dp" />
+	<Spinner
+		android:id="@+id/stateSpinner"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="64dp"
+		android:layout_marginStart="32dp"
+		android:layout_marginTop="8dp"
+		android:entries="@array/placeholder"
+		android:prompt="@string/start_subtitle"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/stateHint" />
 
-    <TextView
-        android:id="@+id/subtitle"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/start_subtitle"
-        android:textColor="@color/welcomeText"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/welcome"
-        tools:layout_editor_absoluteX="163dp"
-        tools:layout_editor_absoluteY="246dp" />
+	<TextView
+		android:id="@+id/stateHint"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="32dp"
+		android:text="@string/stateHint"
+		android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+		android:textColor="@color/welcomeTextSub"
+		app:layout_constraintStart_toStartOf="parent"
+		android:layout_marginTop="32dp"
+		app:layout_constraintTop_toBottomOf="@+id/logo" />
 
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="170dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:entries="@array/locations"
-        android:prompt="@string/start_subtitle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/subtitle"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="276dp" />
+	<TextView
+		android:id="@+id/locationHint"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="32dp"
+		android:layout_marginTop="32dp"
+		android:text="@string/locationHint"
+		android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+		android:textColor="@color/welcomeTextSub"
+		android:visibility="invisible"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/stateSpinner"
+		tools:layout_editor_absoluteX="16dp" />
+
+	<Spinner
+		android:id="@+id/locationSpinner"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="32dp"
+		android:layout_marginTop="8dp"
+		android:entries="@array/placeholder"
+		android:visibility="invisible"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/locationHint"
+		tools:layout_editor_absoluteX="8dp"
+		android:layout_marginEnd="64dp"
+		app:layout_constraintEnd_toEndOf="parent" />
+
+	<ImageView
+		android:id="@+id/logo"
+		android:layout_width="100dp"
+		android:layout_height="100dp"
+		app:srcCompat="@drawable/ic_dogtopia_logo"
+		tools:layout_editor_absoluteX="7dp"
+		tools:layout_editor_absoluteY="16dp"
+		app:layout_constraintStart_toStartOf="parent"
+		android:layout_marginStart="32dp"
+		app:layout_constraintTop_toTopOf="parent"
+		android:layout_marginTop="128dp" />
 
 </android.support.constraint.ConstraintLayout>

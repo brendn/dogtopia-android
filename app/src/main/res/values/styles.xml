@@ -12,4 +12,11 @@
 		<item name="android:windowEnterAnimation">@anim/fadein</item>
 		<item name="android:windowExitAnimation">@anim/fadeout</item>
 	</style>
+
+	<style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
+		<item name="windowActionBar">false</item>
+		<item name="android:textColorPrimary">#fff</item>
+		<item name="colorPrimaryDark">@color/colorPrimaryDarkIntro</item>
+		<item name="windowNoTitle">true</item>
+	</style>
 </resources>
