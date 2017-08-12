@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.Spinner
 import android.view.animation.AnimationUtils
+import android.widget.ArrayAdapter
 import android.widget.TextView
 
 
@@ -25,11 +26,16 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        LocationLoader.load(this)
         setContentView(R.layout.activity_start)
         fadeIn(findViewById<TextView>(R.id.welcome), 250L)
         fadeIn(findViewById<TextView>(R.id.subtitle), 500L)
         fadeIn(findViewById<TextView>(R.id.spinner), 500L)
         val spinner = findViewById<Spinner>(R.id.spinner)
+        val arrayAdapter = ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, LocationLoader.locationNames)
+        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        spinner.adapter = arrayAdapter
+
         spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parentView: AdapterView<*>, selectedItemView: View, position: Int, id: Long) {
                 if (!dummy) {
@@ -46,6 +52,7 @@ class MainActivity : AppCompatActivity() {
             }
 
         }
+
     }
 
     private fun fadeIn(view: View, offset: Long) {

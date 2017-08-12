@@ -1,19 +1,13 @@
 package dog.brendan.myapplication
 
-import android.graphics.Bitmap
-import android.graphics.drawable.BitmapDrawable
-import android.graphics.drawable.Drawable
 import android.media.MediaPlayer
 import android.net.Uri
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.util.Log
 import android.view.View
 import android.widget.*
-import com.squareup.picasso.Picasso
 import org.jetbrains.anko.sdk25.coroutines.onClick
 import org.jetbrains.anko.sdk25.coroutines.onInfo
-import org.jetbrains.anko.sdk25.coroutines.onItemClick
 import org.jetbrains.anko.toast
 
 
@@ -21,11 +15,11 @@ class CameraViewActivity : AppCompatActivity() {
 
     private val locationManager = LocationManager()
 
-    private var currentLocation = locationManager.commerce
+    private var currentLocation = LocationLoader.locations[0]
 
     private var currentUUID = ""
 
-    private var prevUUID = currentLocation.gym
+    private var prevUUID = currentLocation.camera[1].id
 
     private lateinit var progress: ProgressBar
 
@@ -45,35 +39,11 @@ class CameraViewActivity : AppCompatActivity() {
 
         if (intent != null) {
             val extra = intent.extras.get("location") as String
-            for (loc in locationManager.locations) {
-                if (loc.name == extra) {
-                    currentLocation = loc
-                }
-            }
+            LocationLoader.locations
+                    .filter { it.name == extra }
+                    .forEach { currentLocation = it }
         }
         setupCameraView()
-    }
-
-    fun loadBitmap(uuid: String) {
-        if (loadTarget == null)
-            loadTarget = object : com.squareup.picasso.Target {
-                override fun onPrepareLoad(placeHolderDrawable: Drawable?) {
-                    Log.d("Dogtopia","lo123123123adedf")
-                }
-
-                override fun onBitmapFailed(errorDrawable: Drawable?) {
-                    Log.d("Dogtopia","oooops")
-
-                }
-
-                override fun onBitmapLoaded(bitmap: Bitmap, from: Picasso.LoadedFrom) {
-                    Log.d("Dogtopia","loadedf")
-                    val vid = findViewById<VideoView>(R.id.camera)
-                    vid.background = BitmapDrawable(applicationContext.resources, bitmap)
-                }
-            }
-
-        Picasso.with(this).load(getThumbURL(uuid)).into(loadTarget);
     }
 
     fun setupCameraView() {
@@ -106,30 +76,24 @@ class CameraViewActivity : AppCompatActivity() {
             }
         }
 
-        vidView.setupRoom(getURL(currentLocation.gym))
+        vidView.setupRoom(getURL(currentLocation.camera[0].id))
         val title = findViewById<TextView>(R.id.camera_title)
         title.text = title.text.toString().replace("NAME", currentLocation.name)
         val gymButton = findViewById<Button>(R.id.gym)
         gymButton.onClick {
-            vidView.changeRoom(currentLocation.gym)
+            vidView.changeRoom(currentLocation.camera[1].id)
         }
         val romperButton = findViewById<Button>(R.id.romper)
         romperButton.onClick {
-            vidView.changeRoom(currentLocation.romper)
+            vidView.changeRoom(currentLocation.camera[2].id)
         }
         val toyboxButton = findViewById<Button>(R.id.toybox)
         toyboxButton.onClick {
-            vidView.changeRoom(currentLocation.toybox)
+            vidView.changeRoom(currentLocation.camera[0].id)
         }
         val outdoorButton = findViewById<Button>(R.id.outside)
         outdoorButton.onClick {
-            vidView.changeRoom(currentLocation.outside)
-        }
-
-        drawerList.onItemClick { p0, p1, p2, p3 ->
-            currentLocation = locationManager.locations[p2]
-            title.text = resources.getString(R.string.cam_title).replace("NAME", currentLocation.name)
-            vidView.changeRoom(currentLocation.gym)
+            vidView.changeRoom(currentLocation.camera[3].id)
         }
     }
 

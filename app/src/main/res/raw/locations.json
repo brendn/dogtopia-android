@@ -1,53 +1,110 @@
-{
-    "michigan": {
-        "commerce": {
-            "title": "Commerce Township",
-            "cameras": [{
-                "Toybox": "02daff262ecc43e69d182aa53fba88c3",
-                "Gym": "7efbc97cd62d44f695b6de175a0de1d0",
-                "Romper": "1f3860fa5d3a47eba1c218bfee3be323",
-                "Outside": "58aa97e71dd74e6cb2e01a16ea0b29f7"
-            }]
-        },
-        "bloomfield": {
-            "title": "Bloomfield",
-            "cameras": [{
-                "Toybox": "f7b0f8caea3141bd97e7027513763630",
-                "Gym": "56ccfcbf166b4461bce1c0f67715af58",
-                "Romper": "44c79ecd8f724223822346c6ea65cffe",
-                "Outside": "14153e6bd6b040b0aa6797e0fe0c4bed"
-            }]
-        },
-        "utica": {
-            "title": "Utica",
-            "cameras": [{
-                "Toybox": "7a081a594eb84b2f966d58fecfc22acd",
-                "Gym": "20f83ccc9bf14e49b4a92f822b8e4846",
-                "Romper": "517fa913f9ab4dfa8733d6912c32bf60",
-                "Outside": "d68098994d134e12a77ce3ed17676d69"
-            }]
-        }
-    },
-    "arizona": {
-        "scottsdale": {
-            "title": "Scottsdale",
-            "cameras": [{
-                "Toybox": "ff5aaa225f4e48c4ac211256cb07c1ad",
-                "Gym": "e5b12c95e31241b481779a31c954a924",
-                "Romper": "05a6a341aba84ae8abfba1cd7c5cb036",
-                "Outside": "NONE"
-            }]
-        }
-    },
-    "canada": {
-        "scottsdale": {
-            "title": "Coquitlam",
-            "cameras": [{
-                "Toybox": "b99e33e40ced4b8999752effd8267175",
-                "Gym": "fa7d9a34fed2421592467412213f6703",
-                "Romper": "NONE",
-                "Backyard": "6f6ef1a30847404ca3f9eb0568dc1d63"
-            }]
-        }
-    }
-}
+[
+  {
+	"name": "Michigan",
+	"shortname": "MI",
+	"location": [
+	  {
+		"name": "Commerce",
+		"address": "3050 Union Lake Road 7A, Commerce Township, Michigan 48382",
+		"phone": "248-897-0300",
+		"website": "https://www.dogtopia.com/commerce/",
+		"email": "commerce@dogdaycare.com",
+		"camera": [
+		  {
+			"name": "Toybox",
+			"id": "02daff262ecc43e69d182aa53fba88c3"
+		  },
+		  {
+			"name": "Gym",
+			"id": "7efbc97cd62d44f695b6de175a0de1d0"
+		  },
+		  {
+			"name": "Romper",
+			"id": "1f3860fa5d3a47eba1c218bfee3be323"
+		  },
+		  {
+			"name": "Outside",
+			"id": "58aa97e71dd74e6cb2e01a16ea0b29f7"
+		  }
+		]
+	  },
+	  {
+		"name": "Bloomfield",
+		"address": "1685 S Telegraph Road, Bloomfield Township, Michigan 48302",
+		"phone": "248-897-0299",
+		"website": "https://www.dogtopia.com/bloomfield/",
+		"email": "bloomfield@dogdaycare.com",
+		"camera": [
+		  {
+			"name": "Toybox",
+			"id": "f7b0f8caea3141bd97e7027513763630"
+		  },
+		  {
+			"name": "Gym",
+			"id": "56ccfcbf166b4461bce1c0f67715af58"
+		  },
+		  {
+			"name": "Romper",
+			"id": "44c79ecd8f724223822346c6ea65cffe"
+		  },
+		  {
+			"name": "Outside",
+			"id": "14153e6bd6b040b0aa6797e0fe0c4bed"
+		  }
+		]
+	  },
+	  {
+		"name": "Utica",
+		"address": "45509 Schoenherr Rd, Utica, Michigan 48315",
+		"phone": "586-413-9500",
+		"website": "https://www.dogtopia.com/utica/",
+		"email": "utica@dogdaycare.com",
+		"camera": [
+		  {
+			"name": "Toybox",
+			"id": "7a081a594eb84b2f966d58fecfc22acd"
+		  },
+		  {
+			"name": "Gym",
+			"id": "20f83ccc9bf14e49b4a92f822b8e4846"
+		  },
+		  {
+			"name": "Romper",
+			"id": "517fa913f9ab4dfa8733d6912c32bf60"
+		  },
+		  {
+			"name": "Outside",
+			"id": "d68098994d134e12a77ce3ed17676d69"
+		  }
+		]
+	  }
+	]
+  },
+  {
+	"name": "Arizona",
+	"shortname": "AZ",
+	"location": [
+	  {
+		"name": "Scottsdale-Raintree",
+		"address": "14747 North Northsight Blvd, Scottsdale, Arizona 85260",
+		"phone": "480-494-8833",
+		"website": "https://www.dogtopia.com/scottsdale-raintree/",
+		"email": "raintree@dogdaycare.com",
+		"camera": [
+		  {
+			"name": "Toybox",
+			"id": "ff5aaa225f4e48c4ac211256cb07c1ad"
+		  },
+		  {
+			"name": "Gym",
+			"id": "e5b12c95e31241b481779a31c954a924"
+		  },
+		  {
+			"name": "Romper",
+			"id": "05a6a341aba84ae8abfba1cd7c5cb036"
+		  }
+		]
+	  }
+	]
+  }
+]
