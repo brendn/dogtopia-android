@@ -49,12 +49,7 @@ class CameraViewActivity : AppCompatActivity() {
     fun setupCameraView() {
         setContentView(R.layout.activity_main)
         progress = findViewById<ProgressBar>(R.id.progressBar)
-        val drawerList = findViewById<ListView>(R.id.navList)
-        val adapt = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, locationManager.locationNames)
-        drawerList.adapter = adapt
-
         val vidView = findViewById<VideoView>(R.id.camera)
-
         vidView.setOnErrorListener { _, _, _ ->
             if (prevUUID != currentUUID && currentUUID != "") {
                 vidView.changeRoom(prevUUID);
@@ -65,34 +60,17 @@ class CameraViewActivity : AppCompatActivity() {
         }
         setupSpinner()
 
-//        loadBitmap(currentUUID)
-
         vidView.onInfo { mp, what, extra ->
-            when (what) {
-                MediaPlayer.MEDIA_INFO_VIDEO_RENDERING_START -> progress.visibility = View.GONE
-                MediaPlayer.MEDIA_INFO_BUFFERING_START -> progress.visibility = View.VISIBLE
-                MediaPlayer.MEDIA_INFO_BUFFERING_END -> progress.visibility = View.VISIBLE
+            progress.visibility = when (what) {
+                MediaPlayer.MEDIA_INFO_VIDEO_RENDERING_START -> View.GONE
+                MediaPlayer.MEDIA_INFO_BUFFERING_START -> View.VISIBLE
+                MediaPlayer.MEDIA_INFO_BUFFERING_END -> View.VISIBLE
+                else -> View.GONE
             }
         }
 
         val title = findViewById<TextView>(R.id.camera_title)
         title.text = title.text.toString().replace("NAME", currentLocation.name)
-//        val gymButton = findViewById<Button>(R.id.gym)
-//        gymButton.onClick {
-//            vidView.changeRoom(currentLocation.getCamera("Gym"))
-//        }
-//        val romperButton = findViewById<Button>(R.id.romper)
-//        romperButton.onClick {
-//            vidView.changeRoom(currentLocation.getCamera("Romper"))
-//        }
-//        val toyboxButton = findViewById<Button>(R.id.toybox)
-//        toyboxButton.onClick {
-//            vidView.changeRoom(currentLocation.getCamera("Toybox"))
-//        }
-//        val outdoorButton = findViewById<Button>(R.id.outside)
-//        outdoorButton.onClick {
-//            vidView.changeRoom(currentLocation.getCamera("Outside"))
-//        }
     }
 
     override fun onResume() {
@@ -114,9 +92,7 @@ class CameraViewActivity : AppCompatActivity() {
                 println(currentLocation.getCamera(options[position]))
             }
 
-            override fun onNothingSelected(parentView: AdapterView<*>) {
-            }
-
+            override fun onNothingSelected(parentView: AdapterView<*>) {}
         }
     }
 
