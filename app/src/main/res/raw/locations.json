@@ -77,6 +77,31 @@
 			"id": "d68098994d134e12a77ce3ed17676d69"
 		  }
 		]
+	  },
+	  {
+		"name": "Birmingham",
+		"address": "2300 Cole Street, Birmingham, Michigan 48009",
+		"phone": "248-897-0280",
+		"website": "https://www.dogtopia.com/birmingham/",
+		"email": "birmingham@dogdaycare.com",
+		"camera": [
+		  {
+			"name": "Toybox",
+			"id": "fc6d6c6c20374b9b9c920d3d35773062"
+		  },
+		  {
+			"name": "Gym",
+			"id": "1ff2d6f02d2f4aadba49e4ea7ff9428a"
+		  },
+		  {
+			"name": "Romper",
+			"id": "ebe0a598664e4d1e92d6c9d7f58c2200"
+		  },
+		  {
+			"name": "Outside",
+			"id": "4cd7e27517494f5694844887f4b00459"
+		  }
+		]
 	  }
 	]
   },

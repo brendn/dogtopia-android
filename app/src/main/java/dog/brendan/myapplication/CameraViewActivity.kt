@@ -76,24 +76,24 @@ class CameraViewActivity : AppCompatActivity() {
             }
         }
 
-        vidView.setupRoom(getURL(currentLocation.camera[0].id))
+        vidView.setupRoom(getURL(currentLocation.getCamera("Gym")))
         val title = findViewById<TextView>(R.id.camera_title)
         title.text = title.text.toString().replace("NAME", currentLocation.name)
         val gymButton = findViewById<Button>(R.id.gym)
         gymButton.onClick {
-            vidView.changeRoom(currentLocation.camera[1].id)
+            vidView.changeRoom(currentLocation.getCamera("Gym"))
         }
         val romperButton = findViewById<Button>(R.id.romper)
         romperButton.onClick {
-            vidView.changeRoom(currentLocation.camera[2].id)
+            vidView.changeRoom(currentLocation.getCamera("Romper"))
         }
         val toyboxButton = findViewById<Button>(R.id.toybox)
         toyboxButton.onClick {
-            vidView.changeRoom(currentLocation.camera[0].id)
+            vidView.changeRoom(currentLocation.getCamera("Toybox"))
         }
         val outdoorButton = findViewById<Button>(R.id.outside)
         outdoorButton.onClick {
-            vidView.changeRoom(currentLocation.camera[3].id)
+            vidView.changeRoom(currentLocation.getCamera("Outside"))
         }
     }
 
