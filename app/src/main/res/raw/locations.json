@@ -11,12 +11,12 @@
 		"email": "commerce@dogdaycare.com",
 		"camera": [
 		  {
-			"name": "Toybox",
-			"id": "02daff262ecc43e69d182aa53fba88c3"
-		  },
-		  {
 			"name": "Gym",
 			"id": "7efbc97cd62d44f695b6de175a0de1d0"
+		  },
+		  {
+			"name": "Toybox",
+			"id": "02daff262ecc43e69d182aa53fba88c3"
 		  },
 		  {
 			"name": "Romper",
@@ -36,12 +36,12 @@
 		"email": "bloomfield@dogdaycare.com",
 		"camera": [
 		  {
-			"name": "Toybox",
-			"id": "f7b0f8caea3141bd97e7027513763630"
-		  },
-		  {
 			"name": "Gym",
 			"id": "56ccfcbf166b4461bce1c0f67715af58"
+		  },
+		  {
+			"name": "Toybox",
+			"id": "f7b0f8caea3141bd97e7027513763630"
 		  },
 		  {
 			"name": "Romper",
@@ -61,12 +61,12 @@
 		"email": "utica@dogdaycare.com",
 		"camera": [
 		  {
-			"name": "Toybox",
-			"id": "7a081a594eb84b2f966d58fecfc22acd"
-		  },
-		  {
 			"name": "Gym",
 			"id": "20f83ccc9bf14e49b4a92f822b8e4846"
+		  },
+		  {
+			"name": "Toybox",
+			"id": "7a081a594eb84b2f966d58fecfc22acd"
 		  },
 		  {
 			"name": "Romper",
@@ -86,12 +86,12 @@
 		"email": "birmingham@dogdaycare.com",
 		"camera": [
 		  {
-			"name": "Toybox",
-			"id": "fc6d6c6c20374b9b9c920d3d35773062"
-		  },
-		  {
 			"name": "Gym",
 			"id": "1ff2d6f02d2f4aadba49e4ea7ff9428a"
+		  },
+		  {
+			"name": "Toybox",
+			"id": "fc6d6c6c20374b9b9c920d3d35773062"
 		  },
 		  {
 			"name": "Romper",
@@ -117,12 +117,12 @@
 		"email": "raintree@dogdaycare.com",
 		"camera": [
 		  {
-			"name": "Toybox",
-			"id": "ff5aaa225f4e48c4ac211256cb07c1ad"
-		  },
-		  {
 			"name": "Gym",
 			"id": "e5b12c95e31241b481779a31c954a924"
+		  },
+		  {
+			"name": "Toybox",
+			"id": "ff5aaa225f4e48c4ac211256cb07c1ad"
 		  },
 		  {
 			"name": "Romper",
