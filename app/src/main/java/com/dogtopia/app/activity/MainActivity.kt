@@ -1,9 +1,10 @@
-package dog.brendan.myapplication
+package com.dogtopia.app.activity
 
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.*
+import com.dogtopia.app.*
 
 
 class MainActivity : AppCompatActivity() {

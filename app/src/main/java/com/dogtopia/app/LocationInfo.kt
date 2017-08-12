@@ -1,4 +1,4 @@
-package dog.brendan.myapplication
+package com.dogtopia.app
 
 data class State(val name: String, val shortname: String, val location: List<LocationInfo>)
 

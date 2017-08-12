@@ -1,4 +1,4 @@
-package dog.brendan.myapplication
+package com.dogtopia.app
 
 import android.app.Activity
 import com.google.gson.Gson

@@ -1,4 +1,4 @@
-package dog.brendan.myapplication
+package com.dogtopia.app
 
 import android.content.Context
 import android.view.View
