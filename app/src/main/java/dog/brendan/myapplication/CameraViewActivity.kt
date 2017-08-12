@@ -6,8 +6,8 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.*
-import org.jetbrains.anko.sdk25.coroutines.onClick
 import org.jetbrains.anko.sdk25.coroutines.onInfo
+import org.jetbrains.anko.sdk25.coroutines.onItemSelectedListener
 import org.jetbrains.anko.toast
 
 
@@ -19,7 +19,7 @@ class CameraViewActivity : AppCompatActivity() {
 
     private var currentUUID = ""
 
-    private var prevUUID = currentLocation.camera[1].id
+    private var prevUUID = currentLocation.getCamera("Gym")
 
     private lateinit var progress: ProgressBar
 
@@ -49,13 +49,11 @@ class CameraViewActivity : AppCompatActivity() {
     fun setupCameraView() {
         setContentView(R.layout.activity_main)
         progress = findViewById<ProgressBar>(R.id.progressBar)
-
         val drawerList = findViewById<ListView>(R.id.navList)
         val adapt = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, locationManager.locationNames)
         drawerList.adapter = adapt
 
         val vidView = findViewById<VideoView>(R.id.camera)
-        vidView.setTag(loadTarget)
 
         vidView.setOnErrorListener { _, _, _ ->
             if (prevUUID != currentUUID && currentUUID != "") {
@@ -65,6 +63,7 @@ class CameraViewActivity : AppCompatActivity() {
             progress.visibility = View.GONE
             true
         }
+        setupSpinner()
 
 //        loadBitmap(currentUUID)
 
@@ -76,24 +75,48 @@ class CameraViewActivity : AppCompatActivity() {
             }
         }
 
-        vidView.setupRoom(getURL(currentLocation.getCamera("Gym")))
         val title = findViewById<TextView>(R.id.camera_title)
         title.text = title.text.toString().replace("NAME", currentLocation.name)
-        val gymButton = findViewById<Button>(R.id.gym)
-        gymButton.onClick {
-            vidView.changeRoom(currentLocation.getCamera("Gym"))
-        }
-        val romperButton = findViewById<Button>(R.id.romper)
-        romperButton.onClick {
-            vidView.changeRoom(currentLocation.getCamera("Romper"))
-        }
-        val toyboxButton = findViewById<Button>(R.id.toybox)
-        toyboxButton.onClick {
-            vidView.changeRoom(currentLocation.getCamera("Toybox"))
-        }
-        val outdoorButton = findViewById<Button>(R.id.outside)
-        outdoorButton.onClick {
-            vidView.changeRoom(currentLocation.getCamera("Outside"))
+//        val gymButton = findViewById<Button>(R.id.gym)
+//        gymButton.onClick {
+//            vidView.changeRoom(currentLocation.getCamera("Gym"))
+//        }
+//        val romperButton = findViewById<Button>(R.id.romper)
+//        romperButton.onClick {
+//            vidView.changeRoom(currentLocation.getCamera("Romper"))
+//        }
+//        val toyboxButton = findViewById<Button>(R.id.toybox)
+//        toyboxButton.onClick {
+//            vidView.changeRoom(currentLocation.getCamera("Toybox"))
+//        }
+//        val outdoorButton = findViewById<Button>(R.id.outside)
+//        outdoorButton.onClick {
+//            vidView.changeRoom(currentLocation.getCamera("Outside"))
+//        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        val vidView = findViewById<VideoView>(R.id.camera)
+        vidView.start()
+    }
+
+    private fun setupSpinner() {
+        val spinner = findViewById<Spinner>(R.id.camera_selector)
+        val options = currentLocation.camera.map { it.name }
+        val adapter = ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, options)
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        spinner.adapter = adapter
+        val vidView = findViewById<VideoView>(R.id.camera)
+        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parentView: AdapterView<*>, selectedItemView: View, position: Int, id: Long) {
+                vidView.changeRoom(currentLocation.getCamera(options[position]))
+                println(currentLocation.getCamera(options[position]))
+            }
+
+            override fun onNothingSelected(parentView: AdapterView<*>) {
+            }
+
         }
     }
 

@@ -44,46 +44,11 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/camera">
 
-            <Button
-                android:id="@+id/gym"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/button_selector"
-                android:text="@string/cam_gym"
-                android:textColor="@color/buttonText" />
-
-            <Button
-                android:id="@+id/romper"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/button_selector"
-                android:text="@string/cam_romper"
-                android:textColor="@color/buttonText" />
-
-            <Button
-                android:id="@+id/toybox"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/button_selector"
-                android:text="@string/cam_toybox"
-                android:textColor="@color/buttonText" />
-
-            <Button
-                android:id="@+id/outside"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/button_selector"
-                android:text="@string/cam_outdoor"
-                android:textColor="@color/buttonText" />
-
+			<Spinner
+				android:id="@+id/camera_selector"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_weight="1" />
 		</LinearLayout>
 
         <TextView

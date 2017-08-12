@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         LocationLoader.load(this)
         setContentView(R.layout.activity_start)
         fadeIn(findViewById<TextView>(R.id.welcome), 250L)

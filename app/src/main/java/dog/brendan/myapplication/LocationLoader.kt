@@ -15,6 +15,11 @@ object LocationLoader {
 
     fun load(activity: Activity) {
         val gson = Gson()
+
+        states.clear()
+        locations.clear()
+        locationNames.clear()
+
         locationNames.add("None")
         val inputStream = activity.resources.openRawResource(R.raw.locations)
         val reader = BufferedReader(InputStreamReader(inputStream))
