@@ -33,5 +33,5 @@ fun Context.fadeOutIn(view: View, offset: Long = 0L) {
     view.visibility = View.VISIBLE
     anim.startOffset = offset
     view.startAnimation(anim)
-    fadeIn(view)
+    fadeIn(view, offset)
 }

@@ -55,8 +55,8 @@ class MainActivity : AppCompatActivity() {
                 dummy = true
             } else {
                 if (stateSpinner.selectedItem.toString() != "None") {
-                    fadeOutIn(findViewById<TextView>(R.id.locationHint))
-                    fadeOutIn(findViewById<TextView>(R.id.locationSpinner))
+                    fadeOutIn(findViewById<TextView>(R.id.locationHint), 500L)
+                    fadeOutIn(findViewById<TextView>(R.id.locationSpinner), 500L)
                     updateLocations(stateSpinner.selectedItem.toString())
                 }
             }
