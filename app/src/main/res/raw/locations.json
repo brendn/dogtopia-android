@@ -206,7 +206,7 @@
 		"address": "300 W South Boulder Rd, Lafayette, Colorado 80026",
 		"phone": "720-263-4583",
 		"website": "https://www.dogtopia.com/lafayette/",
-		"email": "lafayette@dogdaycare.com",
+		"email": "lafayette@dogtopia.com",
 		"camera": [
 		  {
 			"name": "Romper",
@@ -215,6 +215,331 @@
 		  {
 			"name": "Gym",
 			"id": "1f8f303f2f1c4ce5820bafd8bd29f1c9"
+		  }
+		]
+	  }
+	]
+  },
+  {
+	"name": "Minnesota",
+	"shortname": "MN",
+	"location": [
+	  {
+		"name": "Bloomington",
+		"address": "5208 W 84th St, Bloomington, MN 55437",
+		"phone": "952-253-5400",
+		"website": "https://www.dogtopia.com/bloomington/",
+		"email": "bloomington@dogtopia.com",
+		"camera": [
+		  {
+			"name": "Gym",
+			"id": "877e8814ce7c4fe0922ad3a8b35914d1"
+		  },
+		  {
+			"name": "Romper",
+			"id": "9a2bb2994a4646efa80eb2ac88abc4cf"
+		  },
+		  {
+			"name": "Toybox",
+			"id": "afc98c1aef26460aab935493cb9cf561"
+		  }
+		]
+	  }
+	]
+  },
+  {
+	"name": "Kentucky",
+	"shortname": "KY",
+	"location": [
+	  {
+		"name": "Louisville-Hurstbourne",
+		"address": "221 South Hurstbourne Parkway Suite 101, Louisville, Kentucky 40222",
+		"phone": "502-554-9661",
+		"website": "https://www.dogtopia.com/louisville-hurstbourne/",
+		"email": "hurstbourne@dogtopia.com",
+		"camera": [
+		  {
+			"name": "Gym",
+			"id": "cd338d52564347ae87f19e2d91da443b"
+		  },
+		  {
+			"name": "Romper",
+			"id": "e8125a12ca3745b98f2256672d979bf8"
+		  },
+		  {
+			"name": "Toy",
+			"id": "afc98c1aef26460aab935493cb9cf561"
+		  },
+		  {
+			"name": "Outdoor",
+			"id": "cb24a30f1bfb43a38fe5b3644e200860"
+		  }
+		]
+	  }
+	]
+  },
+  {
+	"name": "North Carolina",
+	"shortname": "NC",
+	"location": [
+	  {
+		"name": "North Raleigh",
+		"address": "4708 Hargrove Road, Raleigh, North Carolina 27616",
+		"phone": "919-706-0525",
+		"website": "https://www.dogtopia.com/north-raleigh/",
+		"email": "nraleigh@dogdaycare.com",
+		"camera": [
+		  {
+			"name": "Playground",
+			"id": "0ed2e4c7959843baa622e956bf686095"
+		  },
+		  {
+			"name": "Gym",
+			"id": "b996e1918b8648c998b192574e89f7d7"
+		  },
+		  {
+			"name": "Romper",
+			"id": "504abc91b189432a845392342b05d4bd"
+		  },
+		  {
+			"name": "Toybox",
+			"id": "96d38e7391274bd08b99aac102a34ea6"
+		  }
+		]
+	  }
+	]
+  },
+  {
+	"name": "Virginia",
+	"shortname": "VA",
+	"location": [
+	  {
+		"name": "Chesterfield",
+		"address": "11004 Midlothian Turnpike, Richmond, Virginia 23235",
+		"phone": "804-313-9492",
+		"website": "https://www.dogtopia.com/richmond-chesterfield/",
+		"email": "chesterfield@dogdaycare.com",
+		"camera": [
+		  {
+			"name": "Gym",
+			"id": "ee500f0f547841818354d271157cc03d"
+		  },
+		  {
+			"name": "Toybox",
+			"id": "2cb80accd5c44248a76f2a12918828bd"
+		  },
+		  {
+			"name": "Romper",
+			"id": "c80e2622450a4ae1aa64bc4bde9219d0"
+		  },
+		  {
+			"name": "Playground",
+			"id": "4bc27f25a3dc4975b710f7dc9b9717ad"
+		  }
+		]
+	  },
+	  {
+		"name": "Fredericksburg",
+		"address": "4272 Plank Road, Fredericksburg, Virginia 22407",
+		"phone": "540-212-7306",
+		"website": "https://www.dogtopia.com/fredericksburg/",
+		"email": "fredericksburg@dogdaycare.com",
+		"camera": [
+		  {
+			"name": "Gym",
+			"id": "124f1521bf8441beafa4c1ec4991b1be"
+		  },
+		  {
+			"name": "Toybox",
+			"id": "381cdd5fd8ad4d94b12e343e2f20bd0d"
+		  },
+		  {
+			"name": "Romper",
+			"id": "2dd297df8c1b4fd0a6793edaa95b4dfe"
+		  }
+		]
+	  },
+	  {
+		"name": "Woodbridge",
+		"address": "14885 Persistence Drive, Woodbridge, Virginia 22191",
+		"phone": "703-278-2045",
+		"website": "https://www.dogtopia.com/woodbridge/",
+		"email": "woodbridge@dogdaycare.com",
+		"camera": [
+		  {
+			"name": "Gym",
+			"id": "0b23d11affd641ec92d5c1cbf67ad51d"
+		  },
+		  {
+			"name": "Romper",
+			"id": "a53762d736fa4b46b27865baee21fe13"
+		  },
+		  {
+			"name": "Lounge",
+			"id": "847b3868595b409b81896c5c9fc382d2"
+		  }
+		]
+	  },
+	  {
+		"name": "Gainesville",
+		"address": "5615 Wellington Road, Gainesville, VA 20155",
+		"phone": "703-483-9444",
+		"website": "https://www.dogtopia.com/gainesville/",
+		"email": "gainesville@dogtopia.com",
+		"camera": [
+		  {
+			"name": "Gym",
+			"id": "54f5604141084f138d762c7278ea95d5"
+		  },
+		  {
+			"name": "Romper",
+			"id": "b4c8fd2b52734463b9558618f2a136fb"
+		  },
+		  {
+			"name": "Toybox",
+			"id": "9843619573484c21996b9b018cfa678d"
+		  }
+		]
+	  },
+	  {
+		"name": "Manassas",
+		"address": "10352 Balls Ford Road, Manassas, Virginia 20109",
+		"phone": "703-278-2101",
+		"website": "https://www.dogtopia.com/manassas/",
+		"email": "manassas@dogdaycare.com",
+		"camera": [
+		  {
+			"name": "Gym (View 1)",
+			"id": "24559c857efc42179394f34d2327122a"
+		  },
+		  {
+			"name": "Gym (View 2)",
+			"id": "ad8c591949dd4329beeacc997b24222f"
+		  },
+		  {
+			"name": "Romper",
+			"id": "fcb800653de04186a01b1117244047ac"
+		  },
+		  {
+			"name": "Toybox",
+			"id": "341005382a084afe9ae7ddc613eb3a4f"
+		  },
+		  {
+			"name": "Outside",
+			"id": "14e46d08ad70490298191e2f8f7f9969"
+		  }
+		]
+	  },
+	  {
+		"name": "Dulles",
+		"address": "3850 Dulles South Court, Suite D, Chantilly, Virginia 20151",
+		"phone": "703-278-2021",
+		"website": "https://www.dogtopia.com/chantilly-dulles/",
+		"email": "dulles@dogdaycare.com",
+		"camera": [
+		  {
+			"name": "Toybox",
+			"id": "2be074b503f849159fae7f1ffd0c7c3b"
+		  },
+		  {
+			"name": "Lounge",
+			"id": "297f788e6a564d0b857e6762259dac80"
+		  },
+		  {
+			"name": "Gym",
+			"id": "290c43ce78464859bc494e3f04077a73"
+		  },
+		  {
+			"name": "Outdoor Play Yard",
+			"id": "545413ad33e440679d03e183deef5fa3"
+		  }
+		]
+	  },
+	  {
+		"name": "Herndon",
+		"address": "720 Jackson Street, Herndon, Virginia 20170",
+		"phone": "703-436-9162",
+		"website": "https://www.dogtopia.com/herndon/",
+		"email": "herndon@dogdaycare.com",
+		"camera": [
+		  {
+			"name": "Gym",
+			"id": "3eb5876960ec47d0b43cbb0627e22b01"
+		  },
+		  {
+			"name": "Romper",
+			"id": "97800f118fc946de8fa23434c418ba18"
+		  }
+		]
+	  },
+	  {
+		"name": "Tysons Corner",
+		"address": "1524 Spring Hill Rd, Suite EE, McLean, Virginia 22102",
+		"phone": "703-278-2135",
+		"website": "https://www.dogtopia.com/mclean-tysons-corner/",
+		"email": "tysonscorner@dogdaycare.com",
+		"camera": [
+		  {
+			"name": "Gym",
+			"id": "4269edb747b44c3fa188978ec3c2ca96"
+		  },
+		  {
+			"name": "Lounge",
+			"id": "7b61909df0f249ddb02bc6e90419237e"
+		  },
+		  {
+			"name": "Romper",
+			"id": "c55ba86cfe8f4b32b00ece664460a4f2"
+		  },
+		  {
+			"name": "Toybox",
+			"id": "ef8fb704cad541d999c1a3ec29660c15"
+		  }
+		]
+	  },
+	  {
+		"name": "Alexandria",
+		"address": "3121 Colvin Street, Alexandria, Virginia 22314",
+		"phone": "703-278-2110",
+		"website": "https://www.dogtopia.com/alexandria/",
+		"email": "alexandria@dogdaycare.com",
+		"camera": [
+		  {
+			"name": "Gym",
+			"id": "63f47cc7bcf641b98186953ccc113368"
+		  },
+		  {
+			"name": "Romper",
+			"id": "29a0d32a471c4a4b9ba1af3d84ca0c29"
+		  },
+		  {
+			"name": "Lounge",
+			"id": "22f74d65599a47768dd992f51c91335a"
+		  },
+		  {
+			"name": "Toybox",
+			"id": "TODO"
+		  }
+		]
+	  },
+	  {
+		"name": "Springfield",
+		"address": "7401 Fullerton Road, Suite A, Springfield, Virginia 22153",
+		"phone": "703-982-0099",
+		"website": "https://www.dogtopia.com/springfield/",
+		"email": "springfield@dogdaycare.com",
+		"camera": [
+		  {
+			"name": "Gym",
+			"id": "cb0a09fa94a948cd9bc8306147afbf28"
+		  },
+		  {
+			"name": "Romper",
+			"id": "52ecda9b7da145db99245b82182d2291"
+		  },
+		  {
+			"name": "Lounge",
+			"id": "c83fd7a397c44dbeaa8bc0a16db615e0"
 		  }
 		]
 	  }
