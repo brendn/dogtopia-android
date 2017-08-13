@@ -571,5 +571,111 @@
 		]
 	  }
 	]
+  },
+  {
+	"name": "Delaware",
+	"shortname": "DE",
+	"location": [
+	  {
+		"name": "Elsmere",
+		"address": "319 New Road, Wilmington, Delaware 19805",
+		"phone": "302-414-0556",
+		"website": "https://www.dogtopia.com/elsmere/",
+		"email": "elsmere@dogdaycare.com",
+		"camera": [
+		  {
+			"name": "Backyard",
+			"id": "974b5cd879474515a8bfe45198a5770f"
+		  },
+		  {
+			"name": "Gym",
+			"id": "8593127b46af4543b097fd3f2b01414b"
+		  },
+		  {
+			"name": "Romper",
+			"id": "10625bd70b884aa9918ce67014363060"
+		  }
+		  {
+			"name": "Toybox",
+			"id": "243de27110094c5b927a82624fda0df2"
+		  }
+		]
+	  }
+	]
+  },
+  {
+	"name": "Pennsylvania",
+	"shortname": "PA",
+	"location": [
+	  {
+		"name": "Chester Springs",
+		"address": "50 Senn Drive, Chester Springs, Pennsylvania 19425",
+		"phone": "484-212-7387",
+		"website": "https://www.dogtopia.com/chester-springs/",
+		"email": "chestersprings@dogdaycare.com",
+		"camera": [
+		  {
+			"name": "Gym",
+			"id": "0973ba96ecda4443bb1c775e4b050bd5"
+		  },
+		  {
+			"name": "Toybox",
+			"id": "347386e1d2ed4770b0dd68a135f95897"
+		  },
+		  {
+			"name": "Romper",
+			"id": "2d8e5b2d7d204b6cac989bf8353760bf"
+		  },
+		  {
+			"name": "Outdoor",
+			"id": "22ca0f042f6544418f440467d23f5aff"
+		  }
+		]
+	  }
+	]
+  },
+  {
+	"name": "Maryland",
+	"shortname": "MD",
+	"location": [
+	  {
+		"name": "White Flint",
+		"address": "4920 Wyaconda Road, North Bethesda, Maryland 20852",
+		"phone": "240-389-5124",
+		"website": "https://www.dogtopia.com/north-bethesda-white-flint/",
+		"email": "whiteflint@dogdaycare.com",
+		"camera": [
+		  {
+			"name": "Gym",
+			"id": "0086bb1e954845f9a2c16a6716627b19"
+		  },
+		  {
+			"name": "Romper",
+			"id": "79bdf44a569c4c3cbb6fd7ef184acc4f"
+		  }
+		]
+	  },
+	  {
+		"name": "Canton",
+		"address": "2706 O'Donnell Street, Baltimore, Maryland 21224",
+		"phone": "240-232-5523",
+		"website": "https://www.dogtopia.com/baltimore-canton/",
+		"email": "canton@dogdaycare.com",
+		"camera": [
+		  {
+			"name": "Gym",
+			"id": "576bbbd0673b474a98a5eb304baa70cc"
+		  },
+		  {
+			"name": "Romper",
+			"id": "545729e589a24f31bacfecb8ae93c562"
+		  },
+		  {
+			"name": "Toybox",
+			"id": "6912b5576c784bb8ad0551ded0849670"
+		  }
+		]
+	  }
+	]
   }
 ]
