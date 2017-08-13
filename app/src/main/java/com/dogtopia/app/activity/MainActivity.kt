@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.*
 import com.dogtopia.app.*
+import com.dogtopia.app.location.LocationLoader
 
 
 class MainActivity : AppCompatActivity() {

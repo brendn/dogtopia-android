@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.*
-import com.dogtopia.app.LocationLoader
+import com.dogtopia.app.location.LocationLoader
 import com.dogtopia.app.R
 import com.dogtopia.app.onSelect
 import org.jetbrains.anko.sdk25.coroutines.onInfo
