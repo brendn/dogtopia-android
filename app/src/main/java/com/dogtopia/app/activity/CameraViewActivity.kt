@@ -26,8 +26,6 @@ class CameraViewActivity : AppCompatActivity() {
      * TODO:
      * Check if it's naptime.  If so, display a different message and don't show cameras.
      *
-     * Hide buttons for locations that don't have romper/outdoor rooms
-     *
      * Data-saving mode that only loads thumbnails
      */
 
@@ -62,6 +60,7 @@ class CameraViewActivity : AppCompatActivity() {
                 MediaPlayer.MEDIA_INFO_VIDEO_RENDERING_START -> View.GONE
                 MediaPlayer.MEDIA_INFO_BUFFERING_START -> View.VISIBLE
                 MediaPlayer.MEDIA_INFO_BUFFERING_END -> View.VISIBLE
+                MediaPlayer.MEDIA_INFO_AUDIO_NOT_PLAYING -> View.GONE
                 else -> View.GONE
             }
         }
