@@ -15,20 +15,21 @@
         android:background="@color/bg"
         tools:context="com.dogtopia.app.activity.MainActivity">
 
-        <VideoView
-            android:id="@+id/camera"
-            android:layout_width="match_parent"
-            android:layout_height="220dp"
-            android:layout_marginBottom="0dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="0dp"
-            android:elevation="10dp"
-            app:layout_constraintBottom_toTopOf="@+id/camera_controls"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="2dp" />
+		<VideoView
+			android:id="@+id/camera"
+			android:layout_width="match_parent"
+			android:layout_height="220dp"
+			android:layout_marginBottom="0dp"
+			android:layout_marginEnd="0dp"
+			android:layout_marginStart="0dp"
+			android:layout_marginTop="0dp"
+			android:elevation="10dp"
+			android:fadingEdge="none"
+			app:layout_constraintBottom_toTopOf="@+id/camera_controls"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			tools:layout_editor_absoluteX="2dp" />
 
 		<LinearLayout
             android:id="@+id/camera_controls"
