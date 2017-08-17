@@ -25,8 +25,7 @@ class CameraViewActivity : AppCompatActivity() {
 
 	/**
 	 * TODO:
-	 * Check if it's naptime.  If so, display a different message and don't show cameras.
-	 *
+	 * Display error image instead of black screen when cameras are off.
 	 * Data-saving mode that only loads thumbnails
 	 */
 
@@ -74,7 +73,7 @@ class CameraViewActivity : AppCompatActivity() {
 	fun setupHours() {
 		val hoursLabel = findViewById<TextView>(R.id.camera_hours)
 		val task = ExtendedLocationInfo.HoursTodayTask(currentLocation).execute()
-		hoursLabel.text = task.get()
+		hoursLabel.text = hoursLabel.text.toString().replace("TEXT", task.get())
 	}
 
 	override fun onResume() {

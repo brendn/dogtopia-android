@@ -18,7 +18,7 @@ object ExtendedLocationInfo {
 	class HoursTodayTask(val location: LocationLoader.LocationInfo) : AsyncTask<Void, Void, String>() {
 		override fun doInBackground(vararg p0: Void?): String {
 			val doc = Jsoup.connect(location.website).get()
-			return doc.getElementById("today-hours").text().trim()
+			return doc.getElementById("today-hours").text().trim().substring(13)
 		}
 	}
 
