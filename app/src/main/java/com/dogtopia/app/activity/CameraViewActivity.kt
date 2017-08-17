@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.*
 import com.dogtopia.app.location.LocationLoader
 import com.dogtopia.app.R
+import com.dogtopia.app.data.ExtendedLocationInfo
 import com.dogtopia.app.onSelect
 import org.jetbrains.anko.sdk25.coroutines.onInfo
 import org.jetbrains.anko.toast
@@ -54,6 +55,7 @@ class CameraViewActivity : AppCompatActivity() {
             true
         }
         setupSpinner()
+        setupHours()
 
         vidView.onInfo { mp, what, extra ->
             progress.visibility = when (what) {
@@ -67,6 +69,12 @@ class CameraViewActivity : AppCompatActivity() {
 
         val title = findViewById<TextView>(R.id.camera_title)
         title.text = title.text.toString().replace("NAME", currentLocation.name)
+    }
+
+    fun setupHours() {
+        val hoursLabel = findViewById<TextView>(R.id.camera_hours)
+        val task = ExtendedLocationInfo.HoursTodayTask(currentLocation).execute()
+        hoursLabel.text = task.get()
     }
 
     override fun onResume() {
@@ -84,7 +92,6 @@ class CameraViewActivity : AppCompatActivity() {
         val vidView = findViewById<VideoView>(R.id.camera)
         spinner.onSelect { position ->
             vidView.changeRoom(currentLocation.getCamera(options[position]))
-            println(currentLocation.getCamera(options[position]))
         }
     }
 

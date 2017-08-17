@@ -3,6 +3,7 @@
 
     <string name="cam_info">Cameras are turned off for lunch time and closing hours.</string>
     <string name="cam_title">NAME</string>
+	<string name="cam_hours">Hours Today: TEXT</string>
 
     <string name="cam_gym">Gym</string>
     <string name="cam_toybox">Toybox</string>
