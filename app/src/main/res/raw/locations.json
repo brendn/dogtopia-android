@@ -310,6 +310,79 @@
 	]
   },
   {
+	"name": "Texas",
+	"shortname": "TX",
+	"location": [
+	  {
+		"name": "Austin",
+		"address": "2105 RR 620 South, Suite 101, Austin, Texas 78734",
+		"phone": "512-369-3647",
+		"website": "https://www.dogtopia.com/austin/",
+		"email": "austin@dogdaycare.com",
+		"camera": [
+		  {
+			"name": "Yard",
+			"id": "TODO"
+		  },
+		  {
+			"name": "Gym",
+			"id": "3a032972d64040e49bb8637eccf9022c"
+		  },
+		  {
+			"name": "Lounge",
+			"id": "1536d28143d446baa0c0b4d5d95a6ea8"
+		  },
+		  {
+			"name": "Toybox",
+			"id": "fcd2e0f76a9b49c0893f424d8c8bb1dc"
+		  }
+		]
+	  },
+	  {
+		"name": "Waco",
+		"address": "5301 Bosque Blvd, Waco, TX 76710",
+		"phone": "254-633-2875",
+		"website": "https://www.dogtopia.com/waco/",
+		"email": "waco@dogdaycare.com",
+		"camera": [
+		  {
+			"name": "Gym",
+			"id": "9fe34c8a01cb4055a477b103285a7cf6"
+		  },
+		  {
+			"name": "Toybox",
+			"id": "9d55e0caa4dc4e578a607dbb1e94983a"
+		  },
+		  {
+			"name": "Romper",
+			"id": "2b9f816d2dd04d14a62f269a0111cab7"
+		  }
+		]
+	  },
+	  {
+		"name": "Highland Village",
+		"address": "1830 FM 407, Highland Village, Texas 75077",
+		"phone": "972-264-1178",
+		"website": "https://www.dogtopia.com/highland-village/",
+		"email": "highlandvillage@dogtopia.com",
+		"camera": [
+		  {
+			"name": "Gym",
+			"id": "914552c0ace34713b7d6e5e7b18c649e"
+		  },
+		  {
+			"name": "Toybox",
+			"id": "c65d2f1833344573ac0ba93ad47fb6a9"
+		  },
+		  {
+			"name": "Romper",
+			"id": "168a40eaed1b4bbe828d02aea80f69d3"
+		  }
+		]
+	  }
+	]
+  },
+  {
 	"name": "Virginia",
 	"shortname": "VA",
 	"location": [
@@ -629,6 +702,33 @@
 		  {
 			"name": "Outdoor",
 			"id": "22ca0f042f6544418f440467d23f5aff"
+		  }
+		]
+	  }
+	]
+  },
+  {
+	"name": "Ontario",
+	"shortname": "ON",
+	"location": [
+	  {
+		"name": "Burlington",
+		"address": "2020 Appleby Line Unit #B8, Burlington, Ontario L7L 6M6",
+		"phone": "905-634-0943",
+		"website": "https://www.dogtopia.com/burlington/",
+		"email": "burlington@dogtopia.com",
+		"camera": [
+		  {
+			"name": "Gym",
+			"id": "8b6c51aa1d0b4182ae5ae32a84c5fc73"
+		  },
+		  {
+			"name": "Toybox",
+			"id": "cb0c12aade804e2fa037508f2b1e5d65"
+		  },
+		  {
+			"name": "Romper",
+			"id": "d7b05103300040edb61d6c01f360a90e"
 		  }
 		]
 	  }
