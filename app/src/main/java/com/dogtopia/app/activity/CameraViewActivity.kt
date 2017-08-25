@@ -9,6 +9,8 @@ import android.widget.*
 import com.dogtopia.app.location.LocationLoader
 import com.dogtopia.app.R
 import com.dogtopia.app.data.ExtendedLocationInfo
+import com.dogtopia.app.fadeIn
+import com.dogtopia.app.fadeOutIn
 import com.dogtopia.app.onSelect
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.sdk25.coroutines.onInfo
@@ -40,7 +42,7 @@ class CameraViewActivity : AppCompatActivity() {
 		setupCameraView()
 	}
 
-	fun setupCameraView() {
+	private fun setupCameraView() {
 		setContentView(R.layout.activity_main)
 		camera.setOnErrorListener { _, _, _ ->
 			if (prevUUID != currentUUID && currentUUID != "") {
@@ -64,9 +66,10 @@ class CameraViewActivity : AppCompatActivity() {
 		}
 
 		camera_title.text = camera_title.text.toString().replace("NAME", currentLocation.name)
+		fadeOutIn(camera_controls)
 	}
 
-	fun setupHours() {
+	private fun setupHours() {
 		val task = ExtendedLocationInfo.HoursTodayTask(currentLocation).execute()
 		cameraHours.text = cameraHours.text.toString().replace("TEXT", task.get())
 	}
@@ -89,7 +92,7 @@ class CameraViewActivity : AppCompatActivity() {
 	/**
 	 * Changes the room on the [VideoView] given the [room] UUID.
 	 */
-	fun VideoView.changeRoom(room: String) {
+	private fun VideoView.changeRoom(room: String) {
 		if (room != currentUUID) {
 			progressBar.visibility = View.VISIBLE
 			stopPlayback()
@@ -102,7 +105,7 @@ class CameraViewActivity : AppCompatActivity() {
 	 * Calls [VideoView.setVideoURI] while also storing the previous/current URLs in case the
 	 * video fails to load.
 	 */
-	fun VideoView.change(uri: String, uid: String) {
+	private fun VideoView.change(uri: String, uid: String) {
 		prevUUID = currentUUID
 		setVideoURI(Uri.parse(uri))
 		currentUUID = uid
@@ -115,20 +118,7 @@ class CameraViewActivity : AppCompatActivity() {
 
 	private fun getThumbURL(room: String): String = "https://video.nest.com/api/get_image?uuid=$room&width=560"
 
-	/**
-	 * Sets up the [VideoView] for the first-time launch.
-	 */
-	fun VideoView.setupRoom(url: String): VideoView {
-		setVideoURI(Uri.parse(url));
-		requestFocus()
-		setOnPreparedListener {
-			start()
-		}
-		return this
-	}
-
 	override fun onPause() {
 		super.onPause()
-		overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
 	}
 }
