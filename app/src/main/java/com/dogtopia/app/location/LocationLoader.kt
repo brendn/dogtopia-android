@@ -63,6 +63,8 @@ object LocationLoader {
 		}
 	}
 
+	fun getLocation(name: String) : LocationInfo? = locations.firstOrNull { it.name == name }
+
 	/**
 	 * Adds the specified [state] to the [stateLocationMap].
 	 */

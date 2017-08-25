@@ -15,6 +15,19 @@
         android:background="@color/bg"
         tools:context="com.dogtopia.app.activity.MainActivity">
 
+		<TextView
+			android:id="@+id/cameraHours"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="16dp"
+			android:layout_marginStart="16dp"
+			android:text="@string/cam_hours"
+			android:visibility="invisible"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			tools:layout_editor_absoluteX="16dp"
+			tools:layout_editor_absoluteY="475dp" />
+
 		<VideoView
 			android:id="@+id/camera"
 			android:layout_width="wrap_content"

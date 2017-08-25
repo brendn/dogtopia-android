@@ -107,7 +107,7 @@
             app:layout_constraintVertical_bias="1.0" />
 
 		<TextView
-			android:id="@+id/camera_hours"
+			android:id="@+id/cameraHours"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_marginBottom="16dp"

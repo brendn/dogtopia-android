@@ -10,6 +10,7 @@ import com.dogtopia.app.location.LocationLoader
 import com.dogtopia.app.R
 import com.dogtopia.app.data.ExtendedLocationInfo
 import com.dogtopia.app.onSelect
+import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.sdk25.coroutines.onInfo
 import org.jetbrains.anko.toast
 
@@ -20,8 +21,6 @@ class CameraViewActivity : AppCompatActivity() {
 	private var currentUUID = ""
 
 	private var prevUUID = currentLocation.getCamera("Gym")
-
-	private lateinit var progress: ProgressBar
 
 	/**
 	 * TODO:
@@ -43,54 +42,47 @@ class CameraViewActivity : AppCompatActivity() {
 
 	fun setupCameraView() {
 		setContentView(R.layout.activity_main)
-		progress = findViewById<ProgressBar>(R.id.progressBar)
-		val vidView = findViewById<VideoView>(R.id.camera)
-		vidView.setOnErrorListener { _, _, _ ->
+		camera.setOnErrorListener { _, _, _ ->
 			if (prevUUID != currentUUID && currentUUID != "") {
-				vidView.changeRoom(prevUUID);
+				camera.changeRoom(prevUUID);
 			}
 			toast("Failed to load camera.")
-			progress.visibility = View.GONE
+			progressBar.visibility = View.GONE
 			true
 		}
 		setupSpinner()
 		setupHours()
 
-		vidView.onInfo { mp, what, extra ->
-			progress.visibility = when (what) {
+		camera.onInfo { mp, what, extra ->
+			progressBar.visibility = when (what) {
 				MediaPlayer.MEDIA_INFO_VIDEO_RENDERING_START -> View.GONE
 				MediaPlayer.MEDIA_INFO_BUFFERING_START -> View.VISIBLE
-				MediaPlayer.MEDIA_INFO_BUFFERING_END -> View.VISIBLE
+				MediaPlayer.MEDIA_INFO_BUFFERING_END -> View.GONE
 				MediaPlayer.MEDIA_INFO_AUDIO_NOT_PLAYING -> View.GONE
 				else -> View.GONE
 			}
 		}
 
-		val title = findViewById<TextView>(R.id.camera_title)
-		title.text = title.text.toString().replace("NAME", currentLocation.name)
+		camera_title.text = camera_title.text.toString().replace("NAME", currentLocation.name)
 	}
 
 	fun setupHours() {
-		val hoursLabel = findViewById<TextView>(R.id.camera_hours)
 		val task = ExtendedLocationInfo.HoursTodayTask(currentLocation).execute()
-		hoursLabel.text = hoursLabel.text.toString().replace("TEXT", task.get())
+		cameraHours.text = cameraHours.text.toString().replace("TEXT", task.get())
 	}
 
 	override fun onResume() {
 		super.onResume()
-		val vidView = findViewById<VideoView>(R.id.camera)
-		vidView.start()
+		camera.start()
 	}
 
 	private fun setupSpinner() {
-		val spinner = findViewById<Spinner>(R.id.camera_selector)
 		val options = currentLocation.camera.map { it.name }
 		val adapter = ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, options)
 		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-		spinner.adapter = adapter
-		val vidView = findViewById<VideoView>(R.id.camera)
-		spinner.onSelect { position ->
-			vidView.changeRoom(currentLocation.getCamera(options[position]))
+		camera_selector.adapter = adapter
+		camera_selector.onSelect { position ->
+			camera.changeRoom(currentLocation.getCamera(options[position]))
 		}
 	}
 
@@ -99,7 +91,7 @@ class CameraViewActivity : AppCompatActivity() {
 	 */
 	fun VideoView.changeRoom(room: String) {
 		if (room != currentUUID) {
-			progress.visibility = View.VISIBLE
+			progressBar.visibility = View.VISIBLE
 			stopPlayback()
 			change(getURL(room), room)
 			start()

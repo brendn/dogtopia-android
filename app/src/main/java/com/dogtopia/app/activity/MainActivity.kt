@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import android.widget.*
 import com.dogtopia.app.*
 import com.dogtopia.app.location.LocationLoader
-
+import kotlinx.android.synthetic.main.activity_start.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -34,11 +34,9 @@ class MainActivity : AppCompatActivity() {
 		setContentView(R.layout.activity_start)
 
 		// Fade in the first few elements
-		fadeIn(findViewById<ImageView>(R.id.logo), 250L)
-		fadeIn(findViewById<TextView>(R.id.stateHint), 500L)
-		fadeIn(findViewById<TextView>(R.id.stateSpinner), 500L)
-
-		val stateSpinner = findViewById<Spinner>(R.id.stateSpinner)
+		fadeIn(logo, 250L)
+		fadeIn(stateHint, 500L)
+		fadeIn(stateSpinner, 500L)
 
 		// Set the contents of the state spinner to the list of state names
 		val arrayAdapter = ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, LocationLoader.stateNames)
@@ -55,17 +53,20 @@ class MainActivity : AppCompatActivity() {
 				dummy = true
 			} else {
 				if (stateSpinner.selectedItem.toString() != "None") {
-					fadeOutIn(findViewById<TextView>(R.id.locationHint), 500L)
-					fadeOutIn(findViewById<TextView>(R.id.locationSpinner), 500L)
+					fadeOutIn(locationHint, 500L)
+					fadeOutIn(locationSpinner, 500L)
 					updateLocations(stateSpinner.selectedItem.toString())
 				}
 			}
 		}
 	}
 
+	override fun onStart() {
+		super.onStart()
+	}
+
 	private fun updateLocations(state: String) {
 		dummy2 = false
-		val locationSpinner = findViewById<Spinner>(R.id.locationSpinner)
 		val arrayAdapter = ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, LocationLoader.stateLocationMap[state])
 
 		arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
@@ -105,5 +106,4 @@ class MainActivity : AppCompatActivity() {
 		intent.putExtra("location", location)
 		startActivity(intent)
 	}
-
 }
