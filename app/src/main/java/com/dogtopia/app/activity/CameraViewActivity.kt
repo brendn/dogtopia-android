@@ -15,6 +15,12 @@ import com.dogtopia.app.onSelect
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.sdk25.coroutines.onInfo
 import org.jetbrains.anko.toast
+import android.R.id.edit
+import android.content.Context
+import android.content.SharedPreferences.Editor
+import android.content.SharedPreferences
+
+
 
 class CameraViewActivity : AppCompatActivity() {
 
@@ -120,5 +126,9 @@ class CameraViewActivity : AppCompatActivity() {
 
 	override fun onPause() {
 		super.onPause()
+		val prefs = getSharedPreferences("Dogtopia", Context.MODE_PRIVATE)
+		val editor = prefs.edit()
+		editor.putString("lastLocation", currentLocation.name)
+		editor.apply()
 	}
 }

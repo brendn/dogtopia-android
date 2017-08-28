@@ -1,5 +1,6 @@
 package com.dogtopia.app.activity
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -7,6 +8,9 @@ import android.widget.*
 import com.dogtopia.app.*
 import com.dogtopia.app.location.LocationLoader
 import kotlinx.android.synthetic.main.activity_start.*
+import android.content.SharedPreferences
+
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -32,6 +36,15 @@ class MainActivity : AppCompatActivity() {
 		LocationLoader.load(this)
 
 		setContentView(R.layout.activity_start)
+
+		if (Global.justStarted) {
+			val prefs = getSharedPreferences("Dogtopia", Context.MODE_PRIVATE)
+			if (prefs.getString("lastLocation", "") != "") {
+				val s = prefs.getString("lastLocation", "")
+				displayCameraActivity(s)
+				Global.justStarted = false
+			}
+		}
 
 		// Fade in the first few elements
 		fadeIn(logo, 250L)
@@ -92,6 +105,10 @@ class MainActivity : AppCompatActivity() {
 		if (stateSpinner.selectedItem.toString() != "None") {
 			updateLocations(stateSpinner.selectedItem.toString())
 		}
+		val prefs = getSharedPreferences("Dogto pia", Context.MODE_PRIVATE)
+		val editor = prefs.edit()
+		editor.putString("lastLocation", "")
+		editor.apply()
 	}
 
 	/**
