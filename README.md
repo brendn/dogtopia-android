@@ -9,8 +9,9 @@ The application itself was relatively barebones because I spent more time than a
 - See the active hours of every location
 
 ## Images
-![This is an image](https://i.imgur.com/QlTiOTd.png)
-![This is an image](https://i.imgur.com/gOvYgkM.png)
-![This is an image](https://i.imgur.com/VukESWi.png)
-
+<p float="left">
+<img src="https://i.imgur.com/QlTiOTd.png" width="40%" height="40%" />
+<img src="https://i.imgur.com/gOvYgkM.png" width="40%" height="40%" />
+<img src="https://i.imgur.com/VukESWi.png" width="40%" height="40%" />
+</p>
 
